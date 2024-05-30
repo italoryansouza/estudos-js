@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tratamento de Dados</title>
+
+    <style>
+
+        body {
+            background-color: rgb(0, 67, 238);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1::selection{
+            background-color: rgb(255, 0, 128);
+        }
+    
+    </style>
+
+</head>
+<body>
+    <h1>Olá Mundo</h1>
+    <p>Já me livrei a maldição</p>
+
+    <script>
+
+        var nome = window.prompt('Qual o seu nome?'); //Pergunta algo
+        window.alert('É um prazer te conhecer '+ nome); // O + é uma concatenação
+
+        /* Para converter um dado utilizamos parse
+        Converter de String para Number (inteiro): Number.parseInt(n) - 'n' sendo a variável
+        */
+
+        var n1 = window.prompt('Digite um número: '); //Entre sempre como uma string
+        var n2 = window.prompt('Digite outro número: ');
+        var soma = String(Number(n1) + Number(n2));
+
+        window.alert('A soma dos dois valores é ' + soma + '!');
+
+        /*Para converter para string, temos duas formas:
+        String(n) ou n.toString() - Sendo 'n' a variável */
+
+        //Utilizando o templatestring (${n}) - com `Texto` 
+
+        window.alert(`O seu nome é ${nome}, o primeiro número foi ${n1}, o segundo número foi ${n2} e a soma entre os dois é ${soma}!`);
+
+        // Algumas coisas que é possível fazer com a string:
+
+        // Sendo var s = 'string'
+
+        // s.length - Quantidade de caracteres
+        // s.toUpperCase() - Colocar letras maiúsculas    
+        // s.toLowerCase() - Colocar letras minúsculas     
+        
+    </script>
+</body>
+</html>

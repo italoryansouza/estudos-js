@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando Strings</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual o seu nome?');
+
+        // Formatações de Números:
+
+        // n.toFixed(quantidade de casas decimais).replace('Uma coisa','por outra' - Exemplo ('.',','))
+        // Transformar em monetário Brasil - n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+        var sal = window.prompt('Digite o seu salário mensal (sem o R$:)');
+        var salm = String(sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+
+        document.write(`${nome}, você recebe ${salm} por mês!`);
+
+        
+
+    </script>
+</body>
+</html>
