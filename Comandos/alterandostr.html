@@ -21,7 +21,7 @@
         // Transformar em monetário Brasil - n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 
         var sal = window.prompt('Digite o seu salário mensal (sem o R$:)');
-        var salm = String(sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+        var salm = String();
 
         document.write(`${nome}, você recebe ${salm} por mês!`);
 

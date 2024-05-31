@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <script>
+        /*
+        Operadores Relacionais: Sempre retorna um valor booleano (True or False)
+    
+        >  -  Maior que 
+        <  - Menor que
+        >=  - Maior ou igual que
+        <=  - Menor ou igual que
+        ==  - Igual (Não diferencia String de Number) - Aqui 5 == "5"  True
+        === - Verifica se é idêntico (Se possui a mesma grandeza e tipo de dado) - Aqui 5 === "5"  False
+        !=  - Diferente de
+        !== - Desigual restrito
+
+        typeof() - retorna o tipo do dado
+
+        Operadores Lógicos:
+
+        ! - Negação
+        && - Conjunção (e)
+        || - Disjunção (ou)
+
+        Ternário:
+
+        teste ? True : false
+
+        É feito um teste ? O que acontece se o resultado for verdadeiro : O que acontece se o resultado for falso
+
+        */
+
+        var nome = String(window.prompt('Qual o seu nome?'));
+        var idade = Number.parseInt(window.prompt('Qual a sua idade?'));
+        var m = idade >= 18? 'maior': 'menor';
+
+        document.write(`Olá, ${nome}!<br>Você tem ${idade} anos.<br>Com isso, constatamos que você é de ${m}!`);
+
+    </script>
+</body>
+</html>
