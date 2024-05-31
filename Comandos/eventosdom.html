@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#box{
+            font: normal 20pt Arial;
+            background-color: rgb(6, 29, 158);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        Interaja...
+    </div>
+    
+    <script>
+        /*Eventos - Coisas que possam acontecer com o elemento:
+        
+        mouseenter - Quando o mouse entra no elemento
+        mouseout - Quando o mouse sai no elemento
+        mousemove - Dispara várias vezes quando o mouse é passado por cima do elemento
+        mousedown - Clicar e segurar o mouse
+        mouseup - Soltar o botão do mouse 
+        click - Apenas clicar
+        */
+
+        var b = window.document.getElementById('box')
+
+        b.addEventListener('click', clicar)
+        b.addEventListener('mouseenter', entra) // ----- b.addEventListener('Evento', função)
+        b.addEventListener('mouseout', sai)
+
+        function clicar(){
+            b.innerText = 'Clicou!'
+            b.style.background = 'red'
+            b.style.borderRadius = '50%'
+        }
+
+        function entra() {
+            b.innerText = 'Entrou'
+            b.style.background = 'rgb(6, 29, 158)'
+            b.style.borderRadius = '0%'
+        }
+
+        function sai() {
+            b.innerText = 'Saiu'
+            b.style.background = 'rgb(6, 29, 158)'
+            b.style.borderRadius = '0%'
+        }
+
+    </script>
+</body>
+</html>

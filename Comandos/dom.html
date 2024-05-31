@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo sobre o DOM</title>
+    <style>
+        body {
+            background-color: rgb(37, 80, 234);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inicando os estudos do DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a utilizar o <strong>DOM</strong>.</p>
+    <div id="d1">Clique em mim</div>
+
+    <script>
+
+        /*Selecionando Obejetos
+        
+        getElementsByTagName('tag')[número referente a aparição no código iniciando do 0]
+        getElementById('id')
+        getElementsByName('Nome')
+        getElementsByClassName('Classe')[]
+
+        Podemos fazer com o seletor:
+
+        querySelector('div#meuid')
+        querySelector('div.minhaclass')
+        
+        */
+
+        var p1 = window.document.getElementsByTagName('p')[1];
+        var div = window.document.getElementById('d1')
+
+        window.document.write(p1.innerHTML) // innerText - Texto que está dentro do elemento
+
+        div.style.background = 'Blue'
+        div.innerText = 'Aguardando...' // Conseguimos alterar o texto de uma tag com o innerText (inserir texto)
+        p1.style.textAlign = 'center'; //Mudando o estilo pegando o elemento com o DOM
+
+    </script>
+</body>
+</html>
