@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" id="form">
+        <input type="text" name="firstname" id="itxt" placeholder="Seu Nome">
+        <input type="text" name="lastname" id="itxt1" placeholder="Seu Sobrenome">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("#form");
+        
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            console.log(formData);
+        })
+        
+        console.log(form);
+    </script>
+</body>
+</html>
