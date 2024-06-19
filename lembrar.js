@@ -2,6 +2,6 @@
 
 var now = new Date()
 
-var hora = now.getHours
+var hora = now.getHours()
 
-console.log(hora)
+console.log(hora + "É assim que faz funcionarl")

@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relembrando Manipulação de Dados</title>
 </head>
+
 <body>
+
+
     <script>
-        var n1 = Number(window.prompt('Digite um número com vírgula:'))
-        var n2 = Number(window.prompt('Digite outro número:'))
 
-        var s = n1 + n2
+        var agora = new Date()
+        var diaSem = agora.getDay()
 
-        document.write(`A soma entre ${n1.toFixed(4).replace('.',',')} e ${n2.toFixed(4).replace('.',',')} é ${s.toFixed(2).replace('.',',')}`)
-        
+        console.log(diaSem)
+
+        switch (diaSem) {
+            case 0:
+                console.log('Hoje é Domingo')
+                break
+
+            case 1:
+                console.log('Hoje é Segunda')
+                break
+
+            case 2:
+                console.log('Hoje é terça')
+                break
+
+            case 3:
+                console.log('Hoje é Quarta')
+                break
+
+            case 4:
+                console.log('Hoje é Quinta')
+                break
+
+            case 5:
+                console.log('Hoje é Sexta')
+                break
+
+            case 6:
+                console.log('Hoje é Sábado')
+                break
+
+            default:
+
+                break
+        }
     </script>
 </body>
+
 </html>
