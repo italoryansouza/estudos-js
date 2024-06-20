@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+
+.bom-dia {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url('imgs/bom-dia.jpg');
+    background-size: cover;
+}
+
+.boa-tarde {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url('imgs/boa-tarde.jpg');
+    background-size: cover;
+}
+
+.boa-noite {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url('imgs/boa-noite.jpg');
+    background-size: cover;
+}
