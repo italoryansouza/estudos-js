@@ -23,7 +23,14 @@ function horaDoDia(){
         division.classList.add("bom-dia")
     } else if (hora >= 12 && hora < 18) {
         division.classList.add("boa-tarde")
+        document.body.style.backgroundColor = 'green'
     } else {
         division.classList.add("boa-noite")
+        document.body.style.backgroundColor = 'black'
     }
 }
+
+// Para mudar atributos de um elemento é só utilizar o nome da variável armazenada.atributo a ser mudado:
+
+// Ex: var img = document.getElementByIy("imagem")
+// var.scr = "fotodetarde.png"

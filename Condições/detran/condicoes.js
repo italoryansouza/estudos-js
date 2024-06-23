@@ -1,7 +1,7 @@
 // Utilizando o swicth -> É uma expressão
 
 var agora = new Date();
-var diaSem = agora.getDay
+var diaSem = agora.getDay();
 
 switch (diaSem) {
     case 0:
