@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegando o valor de um input Radio</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+
+        main {
+            width: 500px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            text-align: center;
+            background-color: rgb(29, 67, 143);
+            color: white;
+            border-radius: 5px;
+        }
+
+        main > h1 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin: 10px 0px;
+        }
+
+    </style>
+</head>
+<body> 
+
+    <main>
+        <h1>Pegando um input radio, e mostrando com um alert o valor escolhido</h1>
+        <p>
+            Escolha uma opção:<br>
+            <input type="radio" name="ops" id="ops1" checked>
+            <label for="ops1">Opção 1</label><br>
+            <input type="radio" name="ops" id="ops2">
+            <label for="ops2">Opção 2</label><br>
+            <input type="radio" name="ops" id="ops3">
+            <label for="ops3">Opção 3</label><br>
+            <input type="radio" name="ops" id="ops4">
+            <label for="ops4">Opção 4</label><br>
+            <input type="radio" name="ops" id="ops5">
+            <label for="ops5">Opção 5</label><br>
+        </p>
+
+        <input type="button" value="Veja sua escolha" onclick="mostrarValor()">
+    </main>
+    
+
+    <script>
+
+        function mostrarValor() {
+            var opes = document.getElementsByName('ops')
+            window.alert(`Você escolheu a opção ${opes[0]}`)
+        }
+
+    </script>
+
+</body>
+</html>
