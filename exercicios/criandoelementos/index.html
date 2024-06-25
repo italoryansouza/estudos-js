@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando elementos com JS</title>
+
+</head>
+<body>
+
+    <h1>Adicione imagens clicando nos botões abaixo:</h1>
+    
+    <input type="button" value="Foto de carro" id="btn1">
+    <input type="button" value="Foto de Yorkes" id="btn2">
+    <input type="button" value="Foto de Games" id="btn3">
+
+    <input type="button" value="Limpar" id="clear">
+
+    <div id="box">
+
+    </div>
+
+    <script>
+
+        var vbtn1 = document.querySelector('#btn1')
+        var vbtn2 = document.querySelector('#btn2')
+        var vbtn3 = document.querySelector('#btn3')
+
+        var cbtn = document.querySelector('#clear')
+
+        var caixa = document.querySelector('#box')
+
+        vbtn1.addEventListener('click', carro)
+        vbtn2.addEventListener('click', yorke)
+        vbtn3.addEventListener('click', game)
+        cbtn.addEventListener('click', crash)
+
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+
+        function carro() {
+
+            img.setAttribute('src', 'carro.jpeg')
+            caixa.appendChild(img)
+        }
+
+        function yorke() {
+
+            img.setAttribute('src', 'yorke.jpeg')
+            caixa.appendChild(img)
+        
+        }
+
+        function game() {
+
+            img.setAttribute('src', 'games.jpeg')
+            caixa.appendChild(img)
+        
+        }   
+
+        function crash() {
+            img.removeAttribute('src')
+        }
+
+    </script>
+
+</body>
+</html>

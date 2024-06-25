@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pegando o valor de um input Radio</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -36,23 +36,23 @@
             border-radius: 5px;
         }
 
-        main > h1 {
+        main>h1 {
             margin-bottom: 10px;
         }
 
         input {
             margin: 10px 0px;
         }
-
     </style>
 </head>
-<body> 
+
+<body>
 
     <main>
         <h1>Pegando um input radio, e mostrando com um alert o valor escolhido</h1>
         <p>
             Escolha uma opção:<br>
-            <input type="radio" name="ops" id="ops1" checked>
+            <input type="radio" name="ops" id="ops1" checked value="opcao1">
             <label for="ops1">Opção 1</label><br>
             <input type="radio" name="ops" id="ops2">
             <label for="ops2">Opção 2</label><br>
@@ -66,16 +66,34 @@
 
         <input type="button" value="Veja sua escolha" onclick="mostrarValor()">
     </main>
-    
+
 
     <script>
 
         function mostrarValor() {
             var opes = document.getElementsByName('ops')
-            window.alert(`Você escolheu a opção ${opes[0]}`)
+            var escolha = ''
+
+            if (opes[0].checked) {
+                escolha = 'opção 1'
+                window.alert(`Você escolheu a ${escolha}`)
+            } else if (opes[1].checked) {
+                escolha = 'opção 2'
+                window.alert(`Você escolheu a ${escolha}`)
+            } else if (opes[2].checked) {
+                escolha = 'opção 3'
+                window.alert(`Você escolheu a ${escolha}`)
+            } else if (opes[3].checked) {
+                escolha = 'opção 4'
+                window.alert(`Você escolheu a ${escolha}`)
+            } else if (opes[4].checked) {
+                escolha = 'opção 5'
+                window.alert(`Você escolheu a ${escolha}`)
+            }
         }
 
     </script>
 
 </body>
+
 </html>
