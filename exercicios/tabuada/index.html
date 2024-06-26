@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com JS</title>
+</head>
+<body>
+    <h1>Tabuada tradicional:</h1>
+
+    <p>Digite um número: <input type="number" name="number" id="txtn"> <input type="button" value="calcular" onclick="calcular()"></p>
+
+    <p>Sua tabuada é:</p>
+
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var resultado = document.querySelector('#res')
+            var txtnum = document.querySelector('#txtn')
+
+            resultado.style.textAlign = 'center'
+            resultado.style.backgroundColor = 'blue'
+            resultado.style.padding = '10px'
+            resultado.style.width = '300px'
+            resultado.style.color = 'white'
+
+            if (txtnum.value.length == 0) {
+
+                window.alert('[ERRO!] Digite um valor válido')
+
+            } else {
+
+                var n = Number(txtnum.value)
+
+                resultado.innerHTML = ''
+
+                for(c = 1 ; c <= 10 ; c++) {
+                    resultado.innerHTML += `${n} x ${c} = ${n * c} <br>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
