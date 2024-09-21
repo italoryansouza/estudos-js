@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+
+    <style>
+        .cor {
+            background-color: blueviolet;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Esse é o Título</h1>
+    <p id="selecao" class="agora">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quod et rerum cupiditate reiciendis modi explicabo sit magnam eveniet beatae. Cupiditate adipisci magnam quo odit harum laudantium fugiat error dolores!</p>
+    <p class="agora">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nam veritatis officia quaerat consequatur consectetur suscipit hic iste facere, recusandae dolores nulla fuga eos velit laborum quam eius laudantium sapiente?</p>
+
+    <div class="mudar"><p>Clique em mim</p></div>
+</body>
+
+<script defer>
+
+    let porID = document.querySelector("#selecao")
+    porID.innerHTML = "deu bom"
+
+    console.log(porID)
+
+    let paragrafos = document.getElementsByClassName("agora")
+    console.log(paragrafos)
+
+    let clicar = document.querySelector(".mudar")
+    console.log(clicar)
+
+    function apertar() {
+        clicar.classList.toggle('.cor')
+        console.log("Ok")
+    }   
+
+    clicar.addEventListener("click", apertar)
+</script>
+</html>
