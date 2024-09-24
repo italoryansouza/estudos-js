@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Caracteres</title>
+</head>
+
+<body>
+    <h1>Digite abaixo:</h1>
+    <textarea name="area" id="areadetexto"></textarea>
+    <div id="contagem">Contagem: 0</div>
+    <div id="mostrador">Texto digitado: </div>
+</body>
+
+<script defer>
+
+    let texts = document.querySelector("#areadetexto")
+    let contador = document.querySelector("#contagem")
+    let mostra = document.querySelector("#mostrador")
+
+    function contarEmostrar() {
+        contador.textContent = `Contagem: ${texts.value.length}`
+        mostra.textContent = `Texto digitado: ${texts.value}`
+    }
+
+    texts.addEventListener("input", contarEmostrar) 
+    
+
+</script>
+</html>

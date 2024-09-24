@@ -1,0 +1,48 @@
+<!-- Existem muitos eventos diferentes que podemos usar em JavaScript. Aqui estão 
+alguns dos mais comuns:
+ click  Disparado quando um elemento é clicado.
+ mouseover  Disparado quando o ponteiro do mouse passa sobre um elemento.
+ mouseout  Disparado quando o ponteiro do mouse deixa um elemento.
+ keydown  Disparado quando uma tecla é pressionada.
+ keyup  Disparado quando uma tecla é solta -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando a tecla em um alert</title>
+ </head>
+ <body>
+    <h1>Digite no campo abaixo:</h1>
+    <input id="clique" type="text">
+
+    <button id="btnAdd">Adicionar Evento</button>
+    <button id="btnRmv">Remover Evento</button>
+    <button id="btn">Meu botão</button>
+ </body>
+
+ <script defer>
+    let ob = document.querySelector("#clique")
+
+    ob.addEventListener("keydown", function(event) {
+        window.alert(`Você digitou a telca: ${event.key}`)
+    })
+
+    let botaoAdicionar = document.querySelector("#btnAdd")
+    let botaoremove = document.querySelector("#btnRmv")
+    let mybutton = document.querySelector("#btn")
+
+    function mostrarAlerta() {
+        alert("Botão Clicado!")
+    }
+
+    botaoAdicionar.addEventListener("click", function(){
+        mybutton.addEventListener("click", mostrarAlerta)
+    })
+
+    botaoremove.addEventListener("click", function(){
+        mybutton.removeEventListener("click", mostrarAlerta)
+    })
+ </script>
+ </html>
