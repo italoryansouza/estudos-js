@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Elementos</title>
+</head>
+<body>
+    <h1>Criando Elementos Utilizando JS</h1>
+
+    <div id="container">
+        <p>Parágrafo Existente</p>
+    </div>
+
+    <button id="addP">Adicionar Parágrafo</button>
+    <button id="rmvP">Remover Parágrafo</button>
+    
+    <script>
+
+        let container = document.querySelector('#container')
+        let addP = document.querySelector('#addP')
+        let rmvP = document.querySelector('#rmvP')
+
+        addP.addEventListener('click', function(){
+            let newP = document.createElement('p')
+            newP.classList.add('test')
+            newP.textContent = "Novo Parágrafo"
+            container.appendChild(newP)
+        })
+
+        rmvP.addEventListener('click', function(){
+            let lastP = container.lastElementChild;
+            container.removeChild(lastP)
+        })
+
+    </script>
+</body>
+</html>

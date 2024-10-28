@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de Classes</title>
+
+    <style>
+        .corAzul {
+            color: blue;
+        }
+
+        #paragrafo {
+            transition: all 0.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Adicionando e Removendo Classes</h1>
+
+    <p id="content">Esse texto terá uma classe adicionada ou removida!</p>
+    <button id="addButton">Adicionar</button>
+    <button id="removeButton">Remover</button>
+
+    <h1 id="altern">Podemos também alternar se a classe estará no documento</h1>
+
+    <button id="altButton">Clique p/ Alternar no Título</button>
+
+    <p id="paragrafo">Este é um parágrafo estilizado.</p>
+    <button id="botaoEstilos">Alterar Estilos</button>
+
+    <script>
+
+        let content = document.querySelector("#content")
+        let addButton = document.querySelector("#addButton")
+        let removeButton = document.querySelector("#removeButton")
+
+        let altButton = document.querySelector("#altButton")
+        let altern = document.querySelector("#altern")
+
+        addButton.addEventListener('click', function () {
+            content.classList.add('corAzul')
+        })
+
+        removeButton.addEventListener('click', function () {
+            content.classList.remove('corAzul')
+        })
+
+        altButton.addEventListener('click', function () {
+            altern.classList.toggle('corAzul')
+        })
+
+        let paragrafo = document.getElementById('paragrafo');
+        let botaoEstilos = document.getElementById('botaoEstilos');
+
+        botaoEstilos.addEventListener('click', function () {
+            paragrafo.style.cssText = 'color: green; font-size: 25px; background - color: lightyellow; ';
+        });
+
+
+    </script>
+</body>
+
+</html>

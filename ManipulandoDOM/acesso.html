@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Acesando elemento pai de um nó com JS</h1>
+
+    <div id="pai">
+        <div id="filho">
+            <p>Testando formas de acessar elementos</p>
+        </div>
+    </div>
+
+    <div id="pai-2">
+        <p>Filho 1</p>
+        <p>Filho 2</p>
+        <p>Filho 3</p>
+    </div>
+
+    <script>
+
+        let filho = document.querySelector('#filho')
+        let pai = filho.parentNode
+
+        console.log(pai)
+
+        let pai_2 = document.querySelector('#pai-2')
+        let filhos = pai_2.children
+        let filhos_2 = pai_2.childNodes
+
+        console.log(`Usando o elemento children, temos: ${filhos}. E para childNodes temos: ${filhos_2}`)
+    </script>
+</body>
+</html>
