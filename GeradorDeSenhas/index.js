@@ -1,16 +1,14 @@
 let tamanho = document.querySelector('#input')
 let gerarButton = document.querySelector('#gerar')
 let contS = document.querySelector("#senha")
+let senhagerada = document.querySelector("#senhaT")
 
 gerarButton.addEventListener('click', function(){
     let comprimento = tamanho.value
 
     let senha = gerarSenha(comprimento)
-    
 
-    let senhagerada = document.createElement('p')
     senhagerada.textContent = senha
-    contS.appendChild(senhagerada)
     
     contS.style.display = 'flex'
 })
