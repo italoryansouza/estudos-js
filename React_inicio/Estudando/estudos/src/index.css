@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+body {
+    background-color: #efefef;
+}
+
+h1 {
+    color: rgb(30, 30, 30);
+}
+
+#cards {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    gap: 200px;
+    margin-top: 100px;
+}

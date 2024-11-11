@@ -1,0 +1,10 @@
+.titleName {
+    color: rgb(40, 40, 40);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+}
